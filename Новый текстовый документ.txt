@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ФК Динамо Київ</title>
+
+<style>
+:root{
+  --blue:#1d4ed8;
+  --yellow:#facc15;
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --radius:20px;
+  --shadow:0 20px 45px rgba(2,6,23,.18);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:
+    radial-gradient(800px 400px at 10% 0%, rgba(29,78,216,.25), transparent 60%),
+    radial-gradient(800px 400px at 90% 0%, rgba(250,204,21,.25), transparent 60%),
+    var(--bg);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:auto;padding:20px}
+
+/* HEADER */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 22px;
+  background:linear-gradient(135deg,var(--blue),#2563eb);
+  color:white;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.header h1{margin:0;font-size:22px}
+.header nav a{
+  margin-left:12px;
+  padding:8px 14px;
+  background:rgba(255,255,255,.15);
+  border-radius:999px;
+  font-size:13px;
+}
+.header nav a:hover{background:rgba(255,255,255,.3)}
+
+/* HERO */
+.hero{
+  margin-top:18px;
+  border-radius:var(--radius);
+  background:
+    linear-gradient(180deg,rgba(29,78,216,.55),rgba(29,78,216,.1)),
+    url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1400&q=80");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:40px;
+  box-shadow:var(--shadow);
+}
+.hero h2{font-size:32px;margin:0 0 10px}
+.hero p{max-width:600px;font-size:15px}
+
+/* SECTIONS */
+section{margin-top:30px}
+.section-title{
+  font-size:22px;
+  margin-bottom:12px;
+  border-left:6px solid var(--blue);
+  padding-left:10px;
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+/* TROPHIES */
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;border-bottom:1px solid #e5e7eb;font-size:14px}
+th{color:var(--muted);text-align:left}
+
+/* SQUAD */
+.squad{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:14px;
+}
+.player{
+  background:linear-gradient(135deg,#eff6ff,#ffffff);
+  border-radius:16px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.avatar{
+  width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--yellow));
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:bold;
+}
+.player b{font-size:14px}
+.player span{font-size:12px;color:var(--muted)}
+
+/* MATCH */
+.match{
+  background:linear-gradient(135deg,#fef9c3,#ffffff);
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:var(--shadow);
+}
+
+/* BOTTOM NAV */
+.bottom-nav{
+  position:sticky;
+  bottom:10px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  padding:14px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);
+  border-radius:999px;
+  margin-top:40px;
+  box-shadow:var(--shadow);
+}
+.bottom-nav a{
+  padding:10px 18px;
+  border-radius:999px;
+  background:var(--blue);
+  color:white;
+  font-size:14px;
+}
+.bottom-nav a:hover{background:#2563eb}
+
+footer{
+  text-align:center;
+  margin:30px 0 10px;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="header">
+  <h1>ФК Динамо Київ</h1>
+  <nav>
+    <a href="#trophies">Трофеї</a>
+    <a href="#squad">Склад</a>
+    <a href="#match">Матч-центр</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <h2>Легенда українського футболу</h2>
+  <p>Футбольний клуб «Динамо» Київ — один із найтитулованіших клубів Східної Європи з багатою історією та європейськими перемогами.</p>
+</div>
+
+<section id="trophies">
+  <h3 class="section-title">Перемоги і трофеї</h3>
+  <div class="card">
+    <table>
+      <tr><th>Трофей</th><th>Кількість</th></tr>
+      <tr><td>Чемпіон України</td><td>16</td></tr>
+      <tr><td>Кубок України</td><td>13</td></tr>
+      <tr><td>Суперкубок України</td><td>9</td></tr>
+      <tr><td>Кубок володарів кубків УЄФА</td><td>2</td></tr>
+      <tr><td>Суперкубок УЄФА</td><td>1</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="squad">
+  <h3 class="section-title">Склад команди</h3>
+  <div class="squad">
+
+    <div class="player"><div class="avatar">GK</div><div><b>Георгій Бущан</b><br><span>Воротар</span></div></div>
+    <div class="player"><div class="avatar">GK</div><div><b>Денис Бойко</b><br><span>Воротар</span></div></div>
+
+    <div class="player"><div class="avatar">DF</div><div><b>Ілля Забарний</b><br><span>Захисник</span></div></div>
+    <div class="player"><div class="avatar">DF</div><div><b>Олександр Караваєв</b><br><span>Захисник</span></div></div>
+    <div class="player"><div class="avatar">DF</div><div><b>Віталій Миколенко</b><br><span>Захисник</span></div></div>
+
+    <div class="player"><div class="avatar">MF</div><div><b>Микола Шапаренко</b><br><span>Півзахисник</span></div></div>
+    <div class="player"><div class="avatar">MF</div><div><b>Віталій Буяльський</b><br><span>Півзахисник</span></div></div>
+
+    <div class="player"><div class="avatar">FW</div><div><b>Артем Бєсєдін</b><br><span>Нападник</span></div></div>
+    <div class="player"><div class="avatar">FW</div><div><b>Владислав Ванат</b><br><span>Нападник</span></div></div>
+
+  </div>
+</section>
+
+<section id="match">
+  <h3 class="section-title">Матч-центр</h3>
+  <div class="match">
+    <div><b>Динамо — Шахтар</b><br><span>Дата: 12.05.2026</span></div>
+    <span>🏟 Київ</span>
+  </div>
+  <div class="match">
+    <div><b>Дніпро-1 — Динамо</b><br><span>Дата: 19.05.2026</span></div>
+    <span>✈ Виїзд</span>
+  </div>
+</section>
+
+<div class="bottom-nav">
+  <a href="#trophies">Трофеї</a>
+  <a href="#squad">Склад</a>
+  <a href="#match">Матч-центр</a>
+</div>
+
+<footer>
+  Навчальний сайт | HTML + CSS | ФК «Динамо» Київ
+</footer>
+
+</div>
+</body>
+</html>
